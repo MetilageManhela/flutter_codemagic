@@ -2,8 +2,8 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import '../model/equipamento.dart';
-import '../services/equipamento_service.dart';
+import 'package:portagem_web/model/equipamento.dart';
+import 'package:portagem_web/services/equipamento_service.dart';
 import 'contactmodel.dart';
 
 

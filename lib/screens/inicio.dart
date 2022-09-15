@@ -1,7 +1,10 @@
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
-
+import 'package:portagem_web/screens/equipamento_categoria.dart';
+import 'package:portagem_web/screens/pistas.dart';
+import 'package:portagem_web/screens/reportar_problema.dart';
+import 'package:portagem_web/screens/salas.dart';
 import 'menubottom.dart';
 import 'navbar.dart';
 

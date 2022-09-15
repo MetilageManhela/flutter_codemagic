@@ -3,8 +3,8 @@ import 'dart:developer';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_session/flutter_session.dart';
 import 'package:http/http.dart' as http;
+import 'package:portagem_web/model/turno.dart';
 import '../constants.dart';
-import '../model/turno.dart';
 
 class TurnoService {
   

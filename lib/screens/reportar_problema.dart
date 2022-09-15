@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart'; 
 import 'package:flutter_session/flutter_session.dart';
 import 'package:http/http.dart' as http; 
+import 'package:portagem_web/constants.dart';
 
-import '../constants.dart';
 import 'menubottom.dart';
 
 

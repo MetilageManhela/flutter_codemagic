@@ -1,10 +1,10 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:portagem_web/screens/navbar.dart';
 import '../model/user_model.dart';
 import '../services/api_service.dart';
 import 'menubottom.dart';
-import 'navbar.dart';
 
 
 class Home extends StatefulWidget {

@@ -1,17 +1,23 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:flutter_codemagic/model/turno.dart';
-import 'package:flutter_codemagic/services/turno_service.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_session/flutter_session.dart';
-
+import 'package:portagem_web/screens/cabines.dart';
+import 'package:portagem_web/screens/equipamento_categoria.dart';
+import 'package:portagem_web/screens/navbar.dart';
+import 'package:portagem_web/services/equipamento_service.dart';
+import 'package:portagem_web/services/provincia_service.dart';
+import '../model/equipamento.dart';
+import '../model/provincia.dart';
+import '../model/turno.dart';
+import '../services/turno_service.dart';
+import '../testes/contactmodel.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 import '../constants.dart';
 
 import 'package:http/http.dart' as http;
 
 import 'menubottom.dart';
-import 'navbar.dart';
 
 
 

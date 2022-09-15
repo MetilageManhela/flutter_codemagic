@@ -2,13 +2,13 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:flutter_session/flutter_session.dart';
+import 'package:portagem_web/screens/navbar.dart';
+import 'package:portagem_web/services/equipamento_service.dart';
 import '../model/equipamento.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
 import '../constants.dart';
 import 'package:http/http.dart' as http;
-import '../services/equipamento_service.dart';
 import 'menubottom.dart';
-import 'navbar.dart';
 
 class EquipamentoLista extends StatefulWidget {
   String titulo,pesquisa;
@@ -110,8 +110,10 @@ List<Equipamento>? _equipamentoo(){
                            ),
                            child: SizedBox(
                             width: 200,
-                            child: RaisedButton(
-                            color: Colors.blue,
+                            //RaisedButton
+                            
+                            child: ElevatedButton(
+                            //color: Colors.blue,
                             child: Text(
                             "Submeter (${selectedEquipamentos!.length})",
                             style: const TextStyle(
@@ -132,9 +134,11 @@ List<Equipamento>? _equipamentoo(){
                               style: TextStyle(color: Colors.white, fontSize: 20),
                             ),
                               onPressed: () {
+                                Navigator.pop(context);
                               submeter_checkList();
-                              Navigator.pop(context);
                               EasyLoading.show(status: 'loading...');
+                              //Navigator.pop(context);
+                              
                             },
                             color: Colors.blue[400],
                              ),
@@ -144,7 +148,7 @@ List<Equipamento>? _equipamentoo(){
                               style: TextStyle(color: Colors.white, fontSize: 20),
                              ),
                             onPressed: () {
-                            // Navigator.pop(context);
+                            Navigator.pop(context);
                             },
                             color: Colors.red[400],
                           )
@@ -231,7 +235,8 @@ Future submeter_checkList() async{
   if(response.statusCode==200){
     EasyLoading.dismiss();
     EasyLoading.showSuccess('Submetido com sucesso!');
-    Navigator.pop(context);
+
+    // Navigator.pop(context);
   }else{
     EasyLoading.dismiss();
     EasyLoading.showError('Erro ao submeter!');

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-
+import 'package:portagem_web/screens/navbar.dart';
+import 'package:portagem_web/services/provincia_service.dart';
 import '../model/provincia.dart';
-import '../services/provincia_service.dart';
-import 'navbar.dart';
 
 
 

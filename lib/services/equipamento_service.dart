@@ -1,8 +1,9 @@
 import 'dart:convert';
 import 'dart:developer';
 import 'package:http/http.dart' as http;
+import 'package:portagem_web/model/equipamento.dart';
+import 'package:portagem_web/model/provincia.dart';
 import '../constants.dart';
-import '../model/equipamento.dart';
 
 
 

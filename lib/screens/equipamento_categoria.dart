@@ -1,10 +1,10 @@
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_codemagic/screens/pistas.dart';
-import 'package:flutter_codemagic/screens/reportar_problema.dart';
-import 'package:flutter_codemagic/screens/salas.dart';
-
+import 'package:portagem_web/screens/equipamento_categoria.dart';
+import 'package:portagem_web/screens/pistas.dart';
+import 'package:portagem_web/screens/reportar_problema.dart';
+import 'package:portagem_web/screens/salas.dart';
 
 import 'cabines.dart';
 import 'menubottom.dart';
@@ -62,7 +62,7 @@ class _Equipamento_CategoriaState extends State<Equipamento_Categoria> {
                  
                    ElevatedButton(
                   onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Salas()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const Salas()));
                   },
                   child: const Text('SALAS'),
                   style: ButtonStyle(
@@ -92,7 +92,7 @@ class _Equipamento_CategoriaState extends State<Equipamento_Categoria> {
                  ),
                    ElevatedButton(
                   onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Cabines()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>const Cabines()));
                   },
                   child: const Text('CABINES'),
                   style: ButtonStyle(

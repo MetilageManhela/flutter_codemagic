@@ -1,15 +1,11 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter_codemagic/model/usuario.dart';
-
+import 'package:portagem_web/model/usuario.dart';
+import 'package:portagem_web/screens/inicio.dart';
 import 'package:http/http.dart' as http;
 import '../constants.dart';
-import 'home.dart'; 
 import 'package:flutter_session/flutter_session.dart';
-import 'package:flutter_easyloading/flutter_easyloading.dart';
-
-import 'inicio.dart'; 
+import 'package:flutter_easyloading/flutter_easyloading.dart'; 
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -28,7 +24,7 @@ class _LoginPageState extends State<LoginPage> {
      }
    
    //metodo para autenticacao 
-    Future login  (String email, String password) async{
+  Future login  (String email, String password) async{
     final url=Uri.parse(ApiConstants.loginUrl);
     final response=await http.post(url,body: {
     "email":email,
@@ -38,10 +34,8 @@ class _LoginPageState extends State<LoginPage> {
      EasyLoading.dismiss();
      print(response.statusCode); 
     final Usuario usuario =Usuario.fromJson(jsonDecode(response.body)); 
-     //Usuario u =Usuario(id: usuario.id ,email: usuario.email,name: usuario.name ,password: usuario.password);
-   // print(usuario.id);
-     //await FlutterSession().set('usuario', usuario);
-     await FlutterSession().set('usuarioId', usuario.id);
+
+    await FlutterSession().set('usuarioId', usuario.id);
     await FlutterSession().set('usuarioNome', usuario.name);
      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>const Inicio()));
     }else{
@@ -54,11 +48,9 @@ bool hide = true;
 @override
   Widget build(BuildContext context) {
     return Scaffold(
-    
-      backgroundColor: Colors.blue,
+     backgroundColor: Colors.blue,
       body:SingleChildScrollView(
         child: Stack(
-          
           children: [
             const Padding(
               padding: EdgeInsets.only(top: 50,left: 40),
@@ -114,7 +106,7 @@ bool hide = true;
                     ),
                     Align(
                       alignment: Alignment.centerRight,
-                      child: TextButton(onPressed: (){},child: Text("Esqueceu?"),
+                      child: TextButton(onPressed: (){},child: const Text("Esqueceu?"),
                       ),
                     ),
                     Center(
@@ -124,13 +116,12 @@ bool hide = true;
                             padding: const EdgeInsets.symmetric(vertical: 5,horizontal: 60)
                           ),
                           onPressed: (){
-                            // EasyLoading.show(status: 'loading...');
-
-                            // login(emailController.text, passwordController.text);
-                             
-                             if (_formKey.currentState!.validate()) {
-                             ScaffoldMessenger.of(context).showSnackBar(
-                             const SnackBar(content: Text('A processar...')),);
+                               
+                              
+                            if (_formKey.currentState!.validate()) {
+                            //  ScaffoldMessenger.of(context).showSnackBar(
+                            //  const SnackBar(content: Text('A processar...')),);
+                            EasyLoading.show();
                              login(emailController.text, passwordController.text);
                              }
                           }, child: const Text("Entrar")

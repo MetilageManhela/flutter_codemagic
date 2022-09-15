@@ -3,10 +3,6 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
 
 
-import 'cabines.dart';
-import 'menubottom.dart';
-import 'navbar.dart';
-
 class Login2 extends StatefulWidget {
   const Login2({Key? key}) : super(key: key);
 
@@ -30,7 +26,7 @@ class _Login2State extends State<Login2> {
       child: Scaffold( 
           backgroundColor: Colors.transparent,
           appBar: AppBar(title: const Text('Login '),),
-          drawer: NavBar(),
+          
             //  bottomNavigationBar: BottomMenu(selected: 1,),
           body: Stack(
             

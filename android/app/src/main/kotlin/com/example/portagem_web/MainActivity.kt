@@ -1,4 +1,4 @@
-package com.example.flutter_codemagic
+package com.example.portagem_web
 
 import io.flutter.embedding.android.FlutterActivity
 

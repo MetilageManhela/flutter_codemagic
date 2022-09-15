@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_codemagic/screens/reportar_problema.dart';
 import 'package:flutter_session/flutter_session.dart';
-import '../model/solicitacao.dart';
+import 'package:portagem_web/screens/create.dart';
+import 'package:portagem_web/screens/provincias.dart';
+import 'package:portagem_web/screens/provincias_form.dart';
+import 'package:portagem_web/screens/reportar_problema.dart';
+import 'package:portagem_web/screens/solicitacao.dart';
 import '../testes/localizaco.dart';
 import 'login2.dart';
 import 'inicio.dart';
@@ -61,7 +64,7 @@ class NavBar extends StatelessWidget {
             leading: const Icon(Icons.person),
             title: const Text('Solicitações'),
             onTap: () {
-            // Navigator.push(context, MaterialPageRoute(builder: (context)=>Solicitacao()));
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>Solicitacao()));
             }
           ),
           ListTile(
